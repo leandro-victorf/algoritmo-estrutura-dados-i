@@ -3,7 +3,6 @@
 int main()
 {
     int n, contador = 0;
-    ;
     int vetor[n];
     scanf("%d", &n);
 
