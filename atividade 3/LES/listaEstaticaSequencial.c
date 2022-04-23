@@ -11,8 +11,8 @@ struct List
     int scale, quantity;
 };
 
-struct List createList(int);
 struct Iten createIten(int);
+struct List createList(int);
 int fullList(struct List);
 int emptyList(struct List);
 int getIten(struct List, struct Iten);
@@ -43,16 +43,24 @@ int main()
             scanf("%d", &key);
             removeIten(&List, createIten(key));
         }
+        if (i == (n - 1))
+        {
+            getList(List);
+        }
     }
-    getList(List);
 }
 
 struct List createList(int n)
 {
     struct List l;
-    l.quantity = 0;
-    l.scale = n;
+    if (l.itens != NULL)
+    {
+        l.quantity = 0;
+        l.scale = n;
+    }
     l.itens = (struct Iten *)malloc(n * sizeof(struct Iten));
+
+    // return l;
 }
 
 struct Iten createIten(int key)
@@ -60,7 +68,7 @@ struct Iten createIten(int key)
     struct Iten it;
     it.key = key;
     return it;
-};
+}
 
 int fullList(struct List l)
 {
