@@ -19,7 +19,6 @@ void insertIten(struct StaticRow *, struct Iten);
 struct Iten removeIten(struct StaticRow *);
 int emptyRow(struct StaticRow);
 int fullRow(struct StaticRow);
-// void getRow(struct StaticRow);
 
 int main()
 {
@@ -44,7 +43,6 @@ int main()
                 printf("%d\n", removeIten(&fila).key);
             }
         }
-        // getRow(fila);
     }
 
     return 0;
@@ -108,15 +106,3 @@ int fullRow(struct StaticRow f)
 {
     return f.end == f.scale - 1;
 }
-
-// void getRow(struct StaticRow f)
-// {
-//     int i;
-//     if (!emptyRow(f))
-//     {
-//         for (i = f.start; i <= f.end; i++)
-//         {
-//             printf("%d%s", f.itens[i].key, i < f.end ? " " : "\n");
-//         }
-//     }
-// }

@@ -15,9 +15,9 @@ struct List createList(int);
 struct Iten createIten(int);
 int fullList(struct List);
 int emptyList(struct List);
+int getIten(struct List, struct Iten);
 void insertIten(struct List *, struct Iten);
 void removeIten(struct List *, struct Iten);
-int getIten(struct List, struct Iten);
 void getList(struct List);
 
 int main()
